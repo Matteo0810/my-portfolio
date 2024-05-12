@@ -12,6 +12,14 @@
 
     transform: translate(-50%, -50%);
 
+    &>img {
+      $size: 15em;
+      width: $size;
+      height: $size;
+
+      border-radius: 100em;
+    }
+
     &>h1 {
       color: $black;
     }

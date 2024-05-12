@@ -24,6 +24,10 @@
     "heroHeader": {
       "subtitle": "Développeur web fullstack",
       "myCV": "Mon CV"
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Actuellement en <b>BUT Informatique</b> en <b>alternance chez CYIM</b> et <b>auto-entrepreneur</b> dans la <b>conception et réalisation de sites web</b>, je dispose d’un large panel de languages de programmation, de descriptions et de frameworks tels que <b>Javascript, Vue.JS, Express.JS, Apollo GraphQL, Node.JS, Typescript, HTML, CSS, React.JS et PHP</b>. J'ai acquis durant mes <b>6 années</b> de formation et d’experience de l’experience dans les différentes phases de <b>conception et réalisation de sites web</b>, comme <b>l'analyse besoin client, la réalisation d'arborescence, de charte graphique</b>, l'intégration et le développement en langages web, <b>front-end et back-end</b>. Passionné par le monde du développement web j’ai eu l’occasion de travailler avec diverses entreprises partout en <b>France</b> et à <b>l’étranger (Royaume-Unis, Allemagne)</b>."
     }
   }
 }

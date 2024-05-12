@@ -1,6 +1,7 @@
 <template>
   <div class="hero-header">
     <div role="contentinfo" class="content">
+      <img src="/images/me.jpg" alt="Matteo's picture" />
       <h1>Mattéo Gaillard</h1>
       <h2>{{ $t("home.heroHeader.subtitle") }}</h2>
 
@@ -8,9 +9,9 @@
         <a href="https://www.linkedin.com/in/matt%C3%A9o-gaillard/" target="_blank" rel="noreferrer">
           <button class="icon icon-linked-in">Linkedin</button>
         </a>
-        <a href="#" download="" target="_blank" rel="noreferrer">
+        <!--<a href="#" download="" target="_blank" rel="noreferrer">
           <button class="icon icon-download">{{ $t("home.heroHeader.myCV") }}</button>
-        </a>
+        </a>-->
         <a href="https://github.com/Matteo0810" target="_blank" rel="noreferrer">
           <button class="icon icon-github">Github</button>
         </a>
