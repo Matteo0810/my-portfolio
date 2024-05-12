@@ -1,0 +1,2 @@
+- [] : put the "a" element inside the button instead of having the button inside the "a" element
+- [] : reduce images size

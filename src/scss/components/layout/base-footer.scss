@@ -1,12 +1,22 @@
 footer {
   padding: 2em 3em;
 
-  &>.icon.icon-heart {
+  a {
+    text-decoration: none;
+  }
+
+  span.icon {
     display: inline-block;
     color: $primary;
     &::before {
-      @include icon("heart");
       position: unset;
+    }
+
+    &.icon-redirect::before {
+      @include icon("open-in-new");
+    }
+    &.icon-heart::before {
+      @include icon("heart");
     }
   }
 }

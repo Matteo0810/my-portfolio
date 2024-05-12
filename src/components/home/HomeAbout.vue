@@ -1,5 +1,5 @@
 <template>
-  <article id="about">
+  <article class="part" id="about">
     <h1 class="title">{{ $t("home.about.title") }}</h1>
     <p v-html="$t('home.about.description')"></p>
 
@@ -15,5 +15,6 @@
 </template>
 
 <style lang="scss" scoped>
+@import "@/scss/components/home/home-base.scss";
 @import "@/scss/components/home/home-about.scss";
 </style>

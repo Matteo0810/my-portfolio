@@ -1,7 +1,7 @@
 <template>
   <div class="hero-header">
     <div role="contentinfo" class="content">
-      <img src="/images/me.jpg" alt="Matteo's picture" />
+      <img src="/images/me.jpg" alt="Matteo's picture">
       <h1>Mattéo Gaillard</h1>
       <h2>{{ $t("home.heroHeader.subtitle") }}</h2>
 
