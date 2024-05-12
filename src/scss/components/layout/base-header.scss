@@ -1,0 +1,83 @@
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em 3em;
+
+  height: 5em;
+
+  &>nav {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    &>ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+
+      &>li {
+        &>a {
+          color: $gray-1;
+          text-decoration: none;
+          transition: all .3s ease;
+
+          &:is(:hover, .active) {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    &>div.locales {
+      border-left: 1px solid $gray-1;
+      position: relative;
+
+      &>button {
+        background-color: transparent;
+        text-transform: uppercase;
+        color: $gray-1;
+        padding: .5em 2em .5em .8em;
+
+        &:is(:hover, .active) {
+          color: $primary;
+        }
+
+        &::before {
+          font-size: 1.3em;
+          right: 5px;
+          @include icon("chevron-down");
+        }
+      }
+
+      &>.dropdown {
+        position: absolute;
+        top: 3em;
+        left: -2em;
+        list-style: none;
+        border: 1px solid $gray-3;
+        padding: .1em 0;
+        border-radius: 5px;
+
+        &>li {
+          cursor: pointer;
+          transition: all .3s ease;
+          padding: .5em .6em .5em 2em;
+
+          &.selected>.icon {
+            &::before {
+              left: -22px;
+              @include icon("check");
+            }
+          }
+
+          &:is(:hover, .selected) {
+            color: $primary;
+          }
+          &:not(:last-of-type) {
+            border-bottom: 1px solid $gray-3;
+          }
+        }
+      }
+    }
+  }
+}

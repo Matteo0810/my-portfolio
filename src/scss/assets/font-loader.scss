@@ -1,0 +1,21 @@
+$fonts: (
+        "montserrat-light",
+        "montserrat-medium",
+        "montserrat-regular",
+        "poppins-medium",
+        "poppins-regular",
+        "poppins-semibold",
+        "poppins-bold"
+);
+
+@each $font in $fonts {
+    @font-face {
+        font-family: $font;
+        src: url(/fonts/#{$font}.ttf);
+    }
+}
+
+@font-face {
+    font-family: mdi;
+    src: url(/node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf);
+}

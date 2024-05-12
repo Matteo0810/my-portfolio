@@ -1,0 +1,56 @@
+@import "assets/font-loader";
+
+*, *::after, *::before {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: montserrat-medium, sans-serif;
+  color: $gray-1;
+}
+
+a {
+  color: $primary;
+}
+
+h1, h2 {
+  font-family: poppins-semibold, sans-serif;
+}
+h3, h4 {
+  font-family: poppins-medium, sans-serif;
+}
+
+h1 {
+  font-size: 2.1875em;
+}
+h2 {
+  font-size: 1.875em;
+}
+h3 {
+  font-size: 1.5625em;
+}
+h4 {
+  font-size: 1.25em;
+}
+
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.icon {
+  position: relative;
+
+  &::before {
+    font-family: mdi, serif;
+    position: absolute;
+    display: block;
+
+    font-size: 1em;
+  }
+}
+
+@import "assets/buttons";

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "education": "Formations",
+      "experiences": "Experiences",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "locales": {
+      "fr": "Français",
+      "en": "Anglais"
+    }
+  },
+  "footer": {
+    "texts": [
+      "Fait avec",
+      "par",
+      "Github du projet"
+    ]
+  },
+  "home": {
+    "heroHeader": {
+      "subtitle": "Développeur web fullstack",
+      "myCV": "Mon CV"
+    }
+  }
+}

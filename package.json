@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -11,8 +11,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "pinia": "^2.0.36",
+    "sass": "^1.77.1",
     "vue": "^3.3.2",
+    "vue-i18n": "^9.13.1",
     "vue-router": "^4.2.0"
   },
   "devDependencies": {

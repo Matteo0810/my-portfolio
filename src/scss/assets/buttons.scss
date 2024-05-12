@@ -1,0 +1,18 @@
+button {
+  background-color: $tertiary;
+  color: $black;
+  border: unset;
+  font-size: 1em;
+
+  font-family: montserrat-medium, sans-serif;
+
+  border-radius: 11px;
+  padding: .8em 1.3em;
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  &:is(:hover, :focus) {
+    background-color: $tertiary-100;
+  }
+}
