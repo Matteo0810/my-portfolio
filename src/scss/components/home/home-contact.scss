@@ -1,0 +1,17 @@
+.phone-number {
+  &::after {
+    content: "+33 6 81 43 50 58";
+  }
+}
+.email {
+  &::after {
+    content: "matteo.gaillard@protonmail.com"
+  }
+}
+
+nav {
+  &>a {
+    display: block;
+    margin: .5em 0;
+  }
+}

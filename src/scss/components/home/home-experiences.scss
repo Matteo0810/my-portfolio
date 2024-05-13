@@ -1,0 +1,25 @@
+section {
+  margin-top: 1.5em;
+
+  &>article {
+    padding: 2em 0 2em 0;
+
+    &>h3 {
+      color: $black;
+    }
+    &>h4 {
+      font-family: montserrat-medium, sans-serif;
+      font-weight: normal;
+      margin-bottom: .5em;
+    }
+    &>ul {
+      margin: 1em 0 1em 1em;
+
+      &>li {
+        margin: .5em 0;
+      }
+    }
+
+  }
+
+}

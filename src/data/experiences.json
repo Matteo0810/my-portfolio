@@ -1,3 +1,52 @@
 [
-
+  {
+    "title": "Développeur web fullstack",
+    "company": "CYIM",
+    "contract": "Contrat d'alternance",
+    "startedAt": "Juillet 2023",
+    "endedAt": null,
+    "description": [
+      "Développement d'applications back-end",
+      "Développement de solutions web",
+      "Exploitation sur des congrès scientifiques de la solution \"registration\""
+    ],
+    "localization": {
+      "regionCode": 35,
+      "cityName": "Rennes",
+      "countryName": "France"
+    }
+  },
+  {
+    "title": "Concepteur web indépendant",
+    "company": null,
+    "contract": "Freelance",
+    "startedAt": "Janvier 2022",
+    "endedAt": null,
+    "description": [
+      "Refonte de site internet déjà existant",
+      "Création de site internet à partir d’un cahier des charges"
+    ],
+    "localization": {
+      "regionCode": 35,
+      "cityName": "Rennes",
+      "countryName": "France"
+    }
+  },
+  {
+    "title": "Développeur web freelance",
+    "company": "CertiDeal",
+    "contract": "Freelance",
+    "startedAt": "Octobre 2022",
+    "endedAt": "Mai 2023",
+    "description": [
+      "Implémentation de scripts sur un outil d'AB-Tasting",
+      "Création d'un pacman \"brandé\" CertiDeal",
+      "Création d'un widget de commentaire vidéo"
+    ],
+    "localization": {
+      "regionCode": 35,
+      "cityName": "Lannion",
+      "countryName": "France"
+    }
+  }
 ]

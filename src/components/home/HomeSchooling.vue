@@ -4,7 +4,7 @@
 
     <section>
       <article :class="{'actual': index === 0}" v-for="(education, index) in schooling" :key="education.title">
-        <span class="year year-to">{{ education.years.to ?? "AUJ" }}</span>
+        <span class="year year-to">{{ education.years.to ?? $t("global.date.today") }}</span>
         <span class="year year-from">{{ education.years.from }}</span>
 
         <img :src="education.thumbnailURL" :alt="`${education.establishment}'s logo`" />

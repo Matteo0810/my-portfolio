@@ -1,4 +1,9 @@
 {
+  "global": {
+    "date": {
+      "today": "Aujourd'hui"
+    }
+  },
   "header": {
     "navigation": {
       "home": "Accueil",
@@ -31,6 +36,14 @@
     },
     "schooling": {
       "title": "Formations"
+    },
+    "experiences": {
+      "title": "Experiences"
+    },
+    "contact": {
+      "title":  "Mes coordonnées",
+      "phone": "Tél",
+      "email": "Adresse mail"
     }
   }
 }
