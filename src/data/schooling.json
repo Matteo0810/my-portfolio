@@ -1,0 +1,81 @@
+[
+  {
+    "thumbnailURL": "/images/schools/enssat.jpg",
+    "title": "Diplôme d'ingénieur",
+    "establishment": "ENSSAT",
+    "years": {
+      "from": "2024",
+      "to": "2027"
+    },
+    "localization": {
+      "cityName": "Lannion",
+      "countryName": "France",
+      "regionCode": 22
+    },
+    "description": [
+      "Gestion de projet",
+      "Développement web",
+      "Développement logiciel",
+      "Cybersécurité",
+      "Base de données"
+    ],
+    "links": [
+      {
+        "type": "REDIRECTION",
+        "href": "https://www.enssat.fr/",
+        "label": "Site internet"
+      }
+    ]
+  },
+  {
+    "thumbnailURL": "/images/schools/iut-lannion.jpg",
+    "title": "Bachelor universitaire de technologie informatique",
+    "establishment": "Université de Rennes",
+    "years": {
+      "from": "2022",
+      "to": "2024"
+    },
+    "localization": {
+      "cityName": "Lannion",
+      "countryName": "France",
+      "regionCode": 22
+    },
+    "description": [
+      "Développement web, création graphique",
+      "Programmation web, logicielle, algorithmie"
+    ],
+    "links": [
+      {
+        "type": "REDIRECTION",
+        "href": "https://iut-lannion.univ-rennes.fr/",
+        "label": "Site internet"
+      }
+    ]
+  },
+  {
+    "thumbnailURL": "/images/schools/lycee-joliot-curie.jpg",
+    "title": "Baccalauréat série général",
+    "establishment": "Lycée Joliot-Curie",
+    "years": {
+      "from": "2019",
+      "to": "2022"
+    },
+    "localization": {
+      "cityName":  "Rennes",
+      "countryName": "France",
+      "regionCode": 35
+    },
+    "description": [
+      "Spécialité Numérique et sciences de l’informatique",
+      "Spécialité Anglais Monde Contemporain",
+      "Option mathématiques complémentaires"
+    ],
+    "links": [
+      {
+        "type": "REDIRECTION",
+        "href": "https://lycee-joliot-curie-rennes.fr/",
+        "label": "Site internet"
+      }
+    ]
+  }
+]
