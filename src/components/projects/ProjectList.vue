@@ -1,3 +1,123 @@
 <template>
+  <section class="projects-section">
+    <aside aria-label="filters" class="filters">
+      <template v-for="{name, data} in FILTERS" :key="name">
+        <h4>{{ $t(`projects.list.filters.${name}.title`) }} ({{data.length}})</h4>
+        <div class="field" v-for="value in data" :key="value">
+          <input
+              @change="() => toggleFilter(name, value)"
+              :checked="activeFilters[name]?.includes(value)"
+              :id="`${name}-${value}`"
+              type="checkbox"
+          />
+          <label class="icon" :for="`${name}-${value}`">
+            {{value}}
+          </label>
+        </div>
+      </template>
+    </aside>
+    <section class="projects">
+      <h2>{{ $t("projects.list.title") }} ({{allProjects.length}})</h2>
 
+      <aside aria-label="active-filters" v-show="activeFiltersLength" class="active-filters">
+        <h5>Filtres actifs ({{ activeFiltersLength }})</h5>
+        <ul>
+          <template v-for="[name, values] in Object.entries(activeFilters)" :key="name">
+            <li @click="() => removeFilter(name, value)" v-for="value in values" :key="value">
+              &times; <span>{{ value }}</span>
+            </li>
+          </template>
+        </ul>
+      </aside>
+      <section>
+        <project-list-item
+            :project="project"
+            v-for="project in allProjects"
+            :key="project.title"
+            @toggle-filter="toggleFilter"
+        />
+      </section>
+    </section>
+  </section>
 </template>
+
+<script setup>
+import projects from "@/data/projects.json";
+import {computed, ref} from "vue";
+
+import ProjectListItem from "@/components/projects/ProjectListItem.vue";
+
+// retrieve all skills and categories of all projects
+const skills = ref([...new Set(projects.reduce((acc, {skills}) => [...acc, ...skills], []))]);
+const categories = ref([...new Set(projects.reduce((acc, {categories}) => [...acc, ...categories], []))]);
+
+// active filters section
+const activeFilters = ref({});
+const activeFiltersLength = computed(() => Object.keys(activeFilters.value).length);
+
+// computed projects (computed because we can have filters)
+const allProjects = computed(() => {
+  const filters = Object.entries(activeFilters.value);
+  return !filters.length ? projects : projects.filter(project =>
+    filters.some(([key, values]) => project[key].some(v => values.includes(v)))
+  );
+});
+
+// where add all new filters with the variable attached
+const FILTERS = [
+  { name: "categories", data: categories.value },
+  { name: "skills", data: skills.value }
+]
+
+/**
+ * @description add or remove a filter
+ * @param {String} name the filter name
+ * @param {Object} data the filter data
+ */
+function toggleFilter(name, data) {
+  if(!name || !data)
+    throw new Error("Missing filter name or filter data.");
+  // if the filter name doesn't exist
+  if(!activeFilters.value[name]) {
+    // then add it
+    activeFilters.value[name] = [data];
+  // otherwise just add to the existing filter
+  } else {
+    // add the data only if it's not already exists
+    if(!activeFilters.value[name].includes(data))
+      activeFilters.value[name].push(data);
+    else
+      activeFilters.value[name].splice(
+          activeFilters.value[name].indexOf(data),
+          1
+      );
+
+    if(!activeFilters.value[name].length)
+      delete activeFilters.value[name];
+  }
+}
+
+/**
+ * @description remove a filter
+ * @param {String} name a filter name
+ * @param {Object} data a filter data
+ */
+function removeFilter(name, data) {
+  if(!name || !data)
+    throw new Error("Missing filter name or filter data.");
+  if(!activeFilters.value[name])
+    throw new Error(`Filter with name ${name} not found.`);
+  const dataIndex = activeFilters.value[name].indexOf(data);
+  // remove the filter data
+  if(dataIndex !== -1)
+    activeFilters.value[name].splice(dataIndex, 1);
+  // if the filter is empty then remove it
+  if(!activeFilters.value[name].length)
+    delete activeFilters.value[name];
+}
+
+</script>
+
+<style lang="scss" scoped>
+@import "@/scss/components/projects/project-list.scss";
+</style>

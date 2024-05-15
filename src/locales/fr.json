@@ -4,6 +4,13 @@
       "today": "Aujourd'hui"
     }
   },
+  "error": {
+    "404": {
+      "title": "Oups...",
+      "message": "La page demandée est introuvable",
+      "backToHome": "Retour à l'acceuil"
+    }
+  },
   "header": {
     "navigation": {
       "home": "Accueil",
@@ -44,6 +51,28 @@
       "title":  "Mes coordonnées",
       "phone": "Tél",
       "email": "Adresse mail"
+    }
+  },
+  "projects": {
+    "list": {
+      "title": "Projets",
+      "activeFilters": "Filtres actifs",
+      "filters": {
+        "categories": {
+          "title": "Catégories"
+        },
+        "skills": {
+          "title": "Compétences"
+        }
+      }
+    },
+    "project": {
+      "seeMore": "Détails du projet",
+      "skillsTitle": "Technologies utilisées",
+      "linksTitle": "Liens",
+      "details": {
+        "close": "Fermer"
+      }
     }
   }
 }

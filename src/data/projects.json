@@ -1,3 +1,56 @@
 [
-
+  {
+    "title": "Site internet dynamique pour la société GPS Logistics",
+    "categories": ["Freelance"],
+    "description": [
+      "Réalisation d'un site internet dynamique pour la société B&B à partir d'une maquette fournie.",
+      "Test fonctionnel des fonctionnalités du site",
+      "Mise en ligne sur un serveur"
+    ],
+    "startedAt": "Août 2021",
+    "endedAt": "Août 2021",
+    "skills": [
+      "NodeJS",
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Git",
+      "Express.JS",
+      "Twig"
+    ],
+    "links": [
+      {
+        "type": "REDIRECTION",
+        "href": "https://gpslogistic.eu/",
+        "label": "Site internet"
+      }
+    ]
+  },
+  {
+    "title": "Site internet dynamique pour la société GPS Logistics",
+    "categories": ["Freelance"],
+    "description": [
+      "Réalisation d'un site internet dynamique pour la société B&B à partir d'une maquette fournie.",
+      "Test fonctionnel des fonctionnalités du site",
+      "Mise en ligne sur un serveur"
+    ],
+    "startedAt": "Août 2021",
+    "endedAt": "Août 2021",
+    "skills": [
+      "NodeJS",
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Git",
+      "Express.JS",
+      "Twig"
+    ],
+    "links": [
+      {
+        "type": "REDIRECTION",
+        "href": "https://gpslogistic.eu/",
+        "label": "Site internet"
+      }
+    ]
+  }
 ]

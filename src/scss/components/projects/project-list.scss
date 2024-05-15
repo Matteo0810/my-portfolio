@@ -1,0 +1,135 @@
+h1 {
+
+  position: relative;
+  //margin-bottom: 1em;
+
+  /*&::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: -1.8em;
+    top: -.5em;
+
+    background-image: url(/images/flowers/flower-7.svg);
+    background-size: cover;
+
+    width: 3em;
+    height: 3em;
+  }*/
+}
+
+.projects-section {
+  display: flex;
+  gap: 1em;
+
+  &>aside {
+    margin: 0 1em;
+    padding-left: 1em;
+    padding-right: 2em;
+    border-right: 1px solid $gray-1;
+
+    width: 12%;
+
+    &>h4 {
+      font-weight: normal;
+      margin: .5em 0;
+      color: $black;
+      font-family: "poppins-regular", sans-serif;
+    }
+    &>div.field {
+      margin: .7em 0;
+
+      &>input:checked + label {
+        &::after {
+          background-color: $primary;
+        }
+        &::before {
+          color: $white;
+        }
+      }
+
+      &>label {
+        position: relative;
+        padding-left: 2em;
+
+        cursor: pointer;
+        color: $primary;
+
+        &:hover::before {
+          color: $primary;
+        }
+
+        &::before, &::after {
+          content: "";
+          display: block;
+          position: absolute;
+
+          transition: all .4s ease;
+
+          left: 0;
+          top: 0;
+        }
+        &::after {
+          border: 1px solid $primary;
+          color: $primary;
+
+          $size: 1.3em;
+          width: $size;
+          height: $size;
+
+          border-radius: 4px;
+        }
+        &::before {
+          @include icon("check");
+          color: $white;
+          z-index: 2;
+          top: 2px;
+          left: 2px;
+        }
+      }
+      &>input {
+        display: none;
+      }
+    }
+  }
+
+  &>section.projects {
+
+    &>aside.active-filters {
+
+      &>ul {
+        list-style: none;
+        display: flex;
+        gap: .5em;
+        margin: .5em 0;
+
+        &>li {
+          background-color: $tertiary-200;
+          border: 1px solid $primary;
+          color: $primary;
+
+          padding: .5em .7em;
+          border-radius: 100px;
+
+          cursor: pointer;
+          font-size: .8em;
+          transition: all .3s ease;
+
+          &:hover {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &>section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+
+      margin-top: 1em;
+    }
+  }
+}
