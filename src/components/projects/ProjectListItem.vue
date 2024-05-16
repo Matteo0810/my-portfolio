@@ -8,9 +8,7 @@
   <article>
     <h3>{{project.title}}</h3>
     <h4>
-      {{toLocaleDate(project.startedAt)}} -
-      <span v-if="project.endedAt">{{toLocaleDate(project.endedAt)}}</span>
-      <span v-else>{{ $t("projects.project.pendingDate") }}</span>
+      {{toLocaleDate(project.startedAt)}} - {{toLocaleDate(project.endedAt)}}
     </h4>
 
     <ul class="categories">
@@ -56,7 +54,7 @@ const props = defineProps({
           value.categories?.length &&
           value.description?.length &&
           value.skills?.length &&
-          value.startedAt;
+          value.startedAt && value.endedAt;
     }
   }
 });

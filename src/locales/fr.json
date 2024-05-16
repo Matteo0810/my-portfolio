@@ -57,6 +57,7 @@
     "list": {
       "title": "Projets",
       "activeFilters": "Filtres actifs",
+      "sortByDate": "Trier par date",
       "filters": {
         "categories": {
           "title": "Catégories"
@@ -70,7 +71,6 @@
       "seeMore": "Détails du projet",
       "skillsTitle": "Technologies utilisées",
       "linksTitle": "Liens",
-      "pendingDate": "En cours",
       "details": {
         "close": "Fermer"
       }

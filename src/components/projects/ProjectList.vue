@@ -26,7 +26,7 @@
             :class="{'asc': sortDir === 1, 'desc': sortDir === -1}"
             @click="() => sortDir = sortDir === 1 ? -1 : 1"
         >
-          Trier par date
+          {{ $t("projects.list.sortByDate") }}
         </button>
       </div>
 
