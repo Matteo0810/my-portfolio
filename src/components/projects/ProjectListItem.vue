@@ -7,7 +7,11 @@
 
   <article>
     <h3>{{project.title}}</h3>
-    <h4>{{project.startedAt}} - {{project.endedAt}}</h4>
+    <h4>
+      {{toLocaleDate(project.startedAt)}} -
+      <span v-if="project.endedAt">{{toLocaleDate(project.endedAt)}}</span>
+      <span v-else>{{ $t("projects.project.pendingDate") }}</span>
+    </h4>
 
     <ul class="categories">
       <li @click="() => emit('toggleFilter', 'categories', category)" class="icon icon-tag" :key="category" v-for="category in project.categories">
@@ -22,14 +26,16 @@
       </li>
     </ul>
 
-    <h5>{{ $t("projects.project.linksTitle") }}</h5>
-    <ul class="links">
-      <li v-for="link in project.links.filter(({type}) => type === 'REDIRECTION')" :key="link.label" class="icon icon-redirect">
-        <a class="icon icon-redirect" :href="link.href" target="_blank" rel="noreferrer">
-          {{link.label}}
-        </a>
-      </li>
-    </ul>
+    <template v-if="project.links.length">
+      <h5>{{ $t("projects.project.linksTitle") }}</h5>
+      <ul class="links">
+        <li v-for="link in project.links.filter(({type}) => type === 'REDIRECTION')" :key="link.label" class="icon icon-redirect">
+          <a class="icon icon-redirect" :href="link.href" target="_blank" rel="noreferrer">
+            {{link.label}}
+          </a>
+        </li>
+      </ul>
+    </template>
 
     <button @click="showDetails = true" class="see-more icon icon-arrow-right">
       {{ $t("projects.project.seeMore") }}
@@ -40,6 +46,7 @@
 <script setup>
 import {ref, toRefs} from "vue";
 import ProjectListItemDetails from "@/components/projects/ProjectListItemDetails.vue";
+import {toLocaleDate} from "../../utils/dateUtils";
 
 const props = defineProps({
   project: {
@@ -49,7 +56,7 @@ const props = defineProps({
           value.categories?.length &&
           value.description?.length &&
           value.skills?.length &&
-          value.startedAt && value.endedAt;
+          value.startedAt;
     }
   }
 });

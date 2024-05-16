@@ -3,12 +3,12 @@
     "title": "Site internet dynamique pour la société GPS Logistics",
     "categories": ["Freelance"],
     "description": [
-      "Réalisation d'un site internet dynamique pour la société B&B à partir d'une maquette fournie.",
+      "Réalisation d'un site internet dynamique pour la société GPS Logistics à partir d'une maquette fournie.",
       "Test fonctionnel des fonctionnalités du site",
       "Mise en ligne sur un serveur"
     ],
-    "startedAt": "Août 2021",
-    "endedAt": "Août 2021",
+    "startedAt": "01-08-2021",
+    "endedAt": "01-08-2021",
     "skills": [
       "NodeJS",
       "HTML5",
@@ -18,39 +18,141 @@
       "Express.JS",
       "Twig"
     ],
-    "links": [
-      {
-        "type": "REDIRECTION",
-        "href": "https://gpslogistic.eu/",
-        "label": "Site internet"
-      }
-    ]
+    "links": [{
+      "type": "REDIRECTION",
+      "href": "https://gpslogistic.eu/",
+      "label": "Site internet"
+    }]
   },
   {
-    "title": "Site internet dynamique pour la société GPS Logistics",
+    "title": "Site internet dynamique pour le cabinet juridique B&B",
     "categories": ["Freelance"],
     "description": [
       "Réalisation d'un site internet dynamique pour la société B&B à partir d'une maquette fournie.",
       "Test fonctionnel des fonctionnalités du site",
       "Mise en ligne sur un serveur"
     ],
-    "startedAt": "Août 2021",
-    "endedAt": "Août 2021",
+    "startedAt": "01-07-2021",
+    "endedAt": "01-07-2021",
     "skills": [
       "NodeJS",
       "HTML5",
       "CSS3",
       "Javascript",
       "Git",
-      "Express.JS",
-      "Twig"
+      "ReactJS"
     ],
+    "links": []
+  },
+  {
+    "title": "Réalisation d'un puissance 4 en C",
+    "categories": ["IUT Lannion"],
+    "description": [
+      "Analyse du jeu puissance 4 et réalisation d'une maquette sur Libre office pour modéliser le puissance 4 demandé par le client fictif.",
+      "Réalisation d'un algorithme en pseudo-code comprenant le programme principale du puissance 4 ainsi que réalisation de la liste des fonctions et procédures du jeu.",
+      "Implémentation du jeu puissance 4 en C",
+      "Réalisation de tests unitaires à l'aide d'un cahier de test.",
+      "Création d'une documentation technique expliquant les fonctions et procédures réalisées."
+    ],
+    "startedAt": "01-10-2022",
+    "endedAt": "01-11-2022",
+    "skills": ["C", "Git"],
+    "links": []
+  },
+  {
+    "title": "Création d'un site web pour une association sportive fictive",
+    "categories": ["IUT Lannion"],
+    "description": [
+      "Analyse d'un besoin client",
+      "Conception d'une arborescence web",
+      "Conception d'une identité visuelle",
+      "Maquettage",
+      "Réalisation du site en HTML, CSS et Javascript",
+      "Test fonctionnel du site",
+      "Présentation du site internet aux portes ouvertes de l'IUT de lannion"
+    ],
+    "startedAt": "01-10-2022",
+    "endedAt": "01-01-2023",
+    "skills": ["CSS3", "HTML5", "Javascript", "Git"],
     "links": [
       {
         "type": "REDIRECTION",
-        "href": "https://gpslogistic.eu/",
+        "href": "https://maximedrdn.github.io/Sport-Koh/",
         "label": "Site internet"
-      }
-    ]
+      },
+      {
+        "type": "REDIRECTION",
+        "href": "https://github.com/MaximeDrdn/Sport-Koh",
+        "label": "Code source"
+      }]
+  },
+  {
+    "title": "Création d'un jeu pacman sur navigateur",
+    "categories": ["Freelance"],
+    "description": [
+      "Développement du jeu en javascript",
+      "Test fonctionnel du jeu"
+    ],
+    "startedAt": "01-05-2023",
+    "endedAt": "01-05-2023",
+    "skills": ["CSS3", "HTML5", "Javascript", "Git"],
+    "links": [{
+      "type": "REDIRECTION",
+      "href": "https://github.com/Matteo0810/pacman",
+      "label": "Code source"
+    }]
+  },
+  {
+    "title": "Création de mon portfolio",
+    "categories": ["Freelance"],
+    "description": [
+      "Conception de la maquette web",
+      "Intégration du site internet avec le framework Vue",
+      "Création de test unitaire avec vitest"
+    ],
+    "startedAt": "01-05-2024",
+    "endedAt": "01-05-2024",
+    "skills": ["CSS3", "HTML5", "Javascript", "VueJS", "NodeJS", "Vitest", "Git"],
+    "links": [{
+      "type": "REDIRECTION",
+      "href": "https://github.com/Matteo0810/my-portfolio",
+      "label": "Code source"
+    }]
+  },
+  {
+    "title": "Création d'un framework d'application web en python",
+    "categories": ["Personnel"],
+    "description": [
+      "Développement de la librairie",
+      "Documentation de la librairie",
+      "Mise en ligne sur github",
+      "Support de la librairie avec des publications de version"
+    ],
+    "startedAt": "01-10-2021",
+    "endedAt": "01-10-2021",
+    "skills": ["Python", "Git"],
+    "links": [{
+      "type": "REDIRECTION",
+      "href": "https://github.com/Matteo0810/asita",
+      "label": "Code source"
+    }]
+  },
+  {
+    "title": "Développement d'une librairie de gestion des permissions pour ApolloGraphQL",
+    "categories": ["Personnel"],
+    "description": [
+      "Développement de la librairie",
+      "Documentation de la librairie",
+      "Mise en ligne sur github",
+      "Support de la librairie avec des publications de version"
+    ],
+    "startedAt": "01-05-2024",
+    "endedAt": "01-07-2024",
+    "skills": ["Javascript", "NodeJS", "Apollo GQL", "Git"],
+    "links": [{
+      "type": "REDIRECTION",
+      "href": "https://github.com/Matteo0810/asita",
+      "label": "Code source"
+    }]
   }
 ]

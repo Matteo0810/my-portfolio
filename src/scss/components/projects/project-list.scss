@@ -29,8 +29,6 @@ h1 {
     padding-right: 2em;
     border-right: 1px solid $gray-1;
 
-    width: 12%;
-
     &>h4 {
       font-weight: normal;
       margin: .5em 0;
@@ -38,7 +36,8 @@ h1 {
       font-family: "poppins-regular", sans-serif;
     }
     &>div.field {
-      margin: .7em 0;
+      margin: 1em 0;
+      width: 14em;
 
       &>input:checked + label {
         &::after {
@@ -54,7 +53,17 @@ h1 {
         padding-left: 2em;
 
         cursor: pointer;
-        color: $primary;
+        //color: $primary;
+
+        &>.count {
+          display: inline-block;
+          margin-left: .5em;
+          background-color: $tertiary;
+          color: $gray-1;
+          padding: .3em .8em;
+          font-size: .8em;
+          border-radius: 100px;
+        }
 
         &:hover::before {
           color: $primary;
@@ -95,6 +104,7 @@ h1 {
   }
 
   &>section.projects {
+    width: 100%;
 
     &>aside.active-filters {
 
@@ -124,12 +134,50 @@ h1 {
       }
     }
 
+    &>.header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 3em;
+
+      //padding-bottom: 1em;
+      //border-bottom: 1px solid $gray-1;
+
+      &>h2 {
+        color: $black;
+      }
+
+      &>button.sort {
+        padding: .7em .8em .7em 2.8em;
+        background-color: transparent;
+        border-radius: 100px;
+        color: $gray-1;
+
+        &.icon-sort {
+          &::before {
+            position: absolute;
+            font-size: 1.5em;
+            left: 10px;
+            top: 24%;
+
+            color: $gray-1;
+          }
+          &.asc::before {
+            @include icon("sort-calendar-ascending");
+          }
+          &.desc::before {
+            @include icon("sort-calendar-descending");
+          }
+        }
+      }
+    }
+
     &>section {
       display: flex;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 2em;
 
-      margin-top: 1em;
+      margin-top: 2em;
     }
   }
 }

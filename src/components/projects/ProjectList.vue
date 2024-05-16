@@ -2,7 +2,9 @@
   <section class="projects-section">
     <aside aria-label="filters" class="filters">
       <template v-for="{name, data} in FILTERS" :key="name">
-        <h4>{{ $t(`projects.list.filters.${name}.title`) }} ({{data.length}})</h4>
+        <h4>
+          {{ $t(`projects.list.filters.${name}.title`) }}
+        </h4>
         <div class="field" v-for="value in data" :key="value">
           <input
               @change="() => toggleFilter(name, value)"
@@ -11,13 +13,22 @@
               type="checkbox"
           />
           <label class="icon" :for="`${name}-${value}`">
-            {{value}}
+            {{value}} <span class="count">{{allProjects.filter(project => project[name].some(v => value === v)).length}}</span>
           </label>
         </div>
       </template>
     </aside>
     <section class="projects">
-      <h2>{{ $t("projects.list.title") }} ({{allProjects.length}})</h2>
+      <div class="header">
+        <h2>{{ $t("projects.list.title") }}</h2>
+        <button
+            class="sort icon icon-sort"
+            :class="{'asc': sortDir === 1, 'desc': sortDir === -1}"
+            @click="() => sortDir = sortDir === 1 ? -1 : 1"
+        >
+          Trier par date
+        </button>
+      </div>
 
       <aside aria-label="active-filters" v-show="activeFiltersLength" class="active-filters">
         <h5>Filtres actifs ({{ activeFiltersLength }})</h5>
@@ -55,12 +66,32 @@ const categories = ref([...new Set(projects.reduce((acc, {categories}) => [...ac
 const activeFilters = ref({});
 const activeFiltersLength = computed(() => Object.keys(activeFilters.value).length);
 
+// sort direction
+const sortDir = ref(1);
+
 // computed projects (computed because we can have filters)
 const allProjects = computed(() => {
   const filters = Object.entries(activeFilters.value);
-  return !filters.length ? projects : projects.filter(project =>
+  let projectList = !filters.length ? projects : projects.filter(project =>
     filters.some(([key, values]) => project[key].some(v => values.includes(v)))
   );
+
+  // transform all date into a js date object
+  projectList = projectList.map(project => {
+    project.startedAt = new Date(project.startedAt);
+    if(project.endedAt)
+      project.endedAt = new Date(project.endedAt);
+    return project;
+  });
+
+  // sort by end date
+  projectList = projectList.sort((a, b) => {
+      return sortDir.value === -1 ?
+          a.endedAt.getFullYear() - b.endedAt.getFullYear() :
+          b.endedAt.getFullYear() - a.endedAt.getFullYear();
+  });
+
+  return projectList;
 });
 
 // where add all new filters with the variable attached
