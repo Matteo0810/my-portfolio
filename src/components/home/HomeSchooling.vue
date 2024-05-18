@@ -7,7 +7,7 @@
         <span class="year year-to">{{ education.years.to ?? $t("global.date.today") }}</span>
         <span class="year year-from">{{ education.years.from }}</span>
 
-        <img :src="education.thumbnailURL" :alt="`${education.establishment}'s logo`" />
+        <img :src="`/images/schools/${education.thumbnailURL}`" :alt="`${education.establishment}'s logo`" />
         <div class="description" role="contentinfo">
           <h3>{{ education.title }}</h3>
           <h4>{{ education.establishment }} - {{ education.localization.cityName }} ({{ education.localization.regionCode }}), {{ education.localization.countryName }}</h4>

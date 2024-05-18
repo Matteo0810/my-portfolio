@@ -1,6 +1,6 @@
 [
   {
-    "thumbnailURL": "/images/schools/enssat.jpg",
+    "thumbnailURL": "enssat.jpg",
     "title": "Diplôme d'ingénieur",
     "establishment": "ENSSAT",
     "years": {
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "thumbnailURL": "/images/schools/iut-lannion.jpg",
+    "thumbnailURL": "iut-lannion.jpg",
     "title": "Bachelor universitaire de technologie informatique",
     "establishment": "Université de Rennes",
     "years": {
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "thumbnailURL": "/images/schools/lycee-joliot-curie.jpg",
+    "thumbnailURL": "lycee-joliot-curie.jpg",
     "title": "Baccalauréat série général",
     "establishment": "Lycée Joliot-Curie",
     "years": {
