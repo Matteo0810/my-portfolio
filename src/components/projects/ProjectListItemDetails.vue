@@ -1,5 +1,5 @@
 <template>
-  <div role="dialog" ref="projectDetailsRef" class="details" v-show="isShown">
+  <div role="dialog" ref="projectDetailsRef" class="details" v-if="project">
     <button @click="closeDetails" class="icon icon-close close">
       {{ $t("projects.project.details.close") }}
     </button>
@@ -47,15 +47,10 @@ import {toLocaleDate} from "@/utils/dateUtils";
 const props = defineProps({
   project: {
     type: Object,
-    required: true
-  },
-  isShown: {
-    type: Boolean,
-    default: false,
-    required: true
+    required: false
   }
 });
-const {project, isShown} = toRefs(props);
+const {project} = toRefs(props);
 
 const emit = defineEmits(["closeDetails"]);
 

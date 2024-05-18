@@ -1,4 +1,9 @@
 <template>
+  <project-list-item-details
+      @close-details="() => projectShown = null"
+      :project="projectShown"
+  />
+
   <section class="projects-section">
     <aside v-show="filterShown" aria-label="filters" class="filters">
       <button @click="filterShown = false" class="close-filters icon icon-close">
@@ -50,6 +55,7 @@
             v-for="project in allProjects"
             :key="project.title"
             @toggle-filter="toggleFilter"
+            @toggle-details="project = projectShown = project"
         />
       </section>
     </section>
@@ -61,6 +67,7 @@ import projects from "@/data/projects.json";
 import {computed, onMounted, onUnmounted, ref} from "vue";
 
 import ProjectListItem from "@/components/projects/ProjectListItem.vue";
+import ProjectListItemDetails from "@/components/projects/ProjectListItemDetails.vue";
 
 // retrieve all skills and categories of all projects
 const skills = ref([...new Set(projects.reduce((acc, {skills}) => [...acc, ...skills], []))]);
@@ -72,6 +79,8 @@ const activeFiltersLength = computed(() => Object.keys(activeFilters.value).leng
 
 // only for responsive purpose
 const filterShown = ref(true);
+
+const projectShown = ref(null);
 
 // sort direction
 const sortDir = ref(1);

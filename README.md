@@ -1,4 +1,4 @@
-# my-portfolio
+# Welcome to my portfolio !
 
 This portfolio was coded using VueJS framework.
 

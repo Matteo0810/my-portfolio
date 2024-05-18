@@ -1,10 +1,4 @@
 <template>
-  <project-list-item-details
-      @close-details="() => isShown = false"
-      :project="project"
-      :isShown="isShown"
-  />
-
   <article>
     <h3>{{project.title}}</h3>
     <h4>
@@ -35,15 +29,14 @@
       </ul>
     </template>
 
-    <button @click="isShown = true" class="see-more icon icon-arrow-right">
+    <button @click="() => emit('toggleDetails', project)" class="see-more icon icon-arrow-right">
       {{ $t("projects.project.seeMore") }}
     </button>
   </article>
 </template>
 
 <script setup>
-import {ref, toRefs} from "vue";
-import ProjectListItemDetails from "@/components/projects/ProjectListItemDetails.vue";
+import {toRefs} from "vue";
 import {toLocaleDate} from "@/utils/dateUtils";
 
 const props = defineProps({
@@ -62,9 +55,7 @@ const props = defineProps({
 });
 const {project} = toRefs(props);
 
-const emit = defineEmits(["toggleFilter"]);
-
-const isShown = ref(false);
+const emit = defineEmits(["toggleFilter", "toggleDetails"]);
 </script>
 
 <style lang="scss" scoped>
