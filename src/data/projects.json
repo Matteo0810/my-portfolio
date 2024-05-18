@@ -2,13 +2,16 @@
   {
     "title": "Site internet dynamique pour la société GPS Logistics",
     "categories": ["Freelance"],
-    "description": [
-      "Réalisation d'un site internet dynamique pour la société GPS Logistics à partir d'une maquette fournie.",
-      "Test fonctionnel des fonctionnalités du site",
-      "Mise en ligne sur un serveur"
+    "shortDescription": "Réalisation d'un site internet dynamique pour la société GPS Logistics à partir d'une maquette fournie par le client.",
+    "steps": [
+      "Intégration de la maquette web.",
+      "Développement d'un système d'inscription/connexion.",
+      "Développement d'un formulaire de contact en utilisant un serveur mail.",
+      "Test fonctionnel des fonctionnalités du site.",
+      "Mise en ligne sur un serveur."
     ],
-    "startedAt": "01-08-2021",
-    "endedAt": "01-08-2021",
+    "startedAt": "08-01-2021",
+    "endedAt": "08-01-2021",
     "skills": [
       "NodeJS",
       "HTML5",
@@ -26,43 +29,48 @@
   },
   {
     "title": "Site internet dynamique pour le cabinet juridique B&B",
+    "shortDescription": "Réalisation d'un site internet vitrine pour le cabinet juridique B&B à partir d'une maquette fournie par le client.",
     "categories": ["Freelance"],
-    "description": [
-      "Réalisation d'un site internet dynamique pour la société B&B à partir d'une maquette fournie.",
-      "Test fonctionnel des fonctionnalités du site",
-      "Mise en ligne sur un serveur"
+    "steps": [
+      "Intégration de la maquette web.",
+      "Développement d'un formulaire de contact en utilisant un serveur mail.",
+      "Test fonctionnel des fonctionnalités du site.",
+      "Mise en ligne sur un serveur."
     ],
-    "startedAt": "01-07-2021",
-    "endedAt": "01-07-2021",
+    "startedAt": "07-01-2021",
+    "endedAt": "07-01-2021",
     "skills": [
       "NodeJS",
       "HTML5",
       "CSS3",
       "Javascript",
       "Git",
+      "Express.JS",
       "ReactJS"
     ],
     "links": []
   },
   {
     "title": "Réalisation d'un puissance 4 en C",
+    "shortDescription": "Réalisation d'un puissance 4 fonctionnant dans un terminal en utilisant le language de programmation C.",
     "categories": ["IUT Lannion"],
-    "description": [
+    "steps": [
       "Analyse du jeu puissance 4 et réalisation d'une maquette sur Libre office pour modéliser le puissance 4 demandé par le client fictif.",
       "Réalisation d'un algorithme en pseudo-code comprenant le programme principale du puissance 4 ainsi que réalisation de la liste des fonctions et procédures du jeu.",
       "Implémentation du jeu puissance 4 en C",
       "Réalisation de tests unitaires à l'aide d'un cahier de test.",
       "Création d'une documentation technique expliquant les fonctions et procédures réalisées."
     ],
-    "startedAt": "01-10-2022",
-    "endedAt": "01-11-2022",
+    "startedAt": "10-01-2022",
+    "endedAt": "11-01-2022",
     "skills": ["C", "Git"],
     "links": []
   },
   {
     "title": "Création d'un site web pour une association sportive fictive",
+    "shortDescription": "Réalisation d'un site web pour l'association sportif SportKOH.",
     "categories": ["IUT Lannion"],
-    "description": [
+    "steps": [
       "Analyse d'un besoin client",
       "Conception d'une arborescence web",
       "Conception d'une identité visuelle",
@@ -71,7 +79,7 @@
       "Test fonctionnel du site",
       "Présentation du site internet aux portes ouvertes de l'IUT de lannion"
     ],
-    "startedAt": "01-10-2022",
+    "startedAt": "10-01-2022",
     "endedAt": "01-01-2023",
     "skills": ["CSS3", "HTML5", "Javascript", "Git"],
     "links": [
@@ -88,13 +96,14 @@
   },
   {
     "title": "Création d'un jeu pacman sur navigateur",
+    "shortDescription": "Réalisation d'un jeu pacman brandé 'Certideal' qui fonctionne sur navigateur.",
     "categories": ["Freelance"],
-    "description": [
+    "steps": [
       "Développement du jeu en javascript",
       "Test fonctionnel du jeu"
     ],
-    "startedAt": "01-05-2023",
-    "endedAt": "01-05-2023",
+    "startedAt": "05-01-2023",
+    "endedAt": "05-01-2023",
     "skills": ["CSS3", "HTML5", "Javascript", "Git"],
     "links": [{
       "type": "REDIRECTION",
@@ -104,14 +113,16 @@
   },
   {
     "title": "Création de mon portfolio",
+    "shortDescription": "Réalisation de mon portfolio avec le framework VueJS.",
     "categories": ["Freelance"],
-    "description": [
+    "steps": [
       "Conception de la maquette web",
-      "Intégration du site internet avec le framework Vue",
-      "Création de test unitaire avec vitest"
+      "Intégration du site internet avec le framework VueJS",
+      "Création de test unitaire avec vitest",
+      "Automatisation du processus de mise en ligne avec GitHub Actions"
     ],
-    "startedAt": "01-05-2024",
-    "endedAt": "01-05-2024",
+    "startedAt": "05-01-2024",
+    "endedAt": "05-01-2024",
     "skills": ["CSS3", "HTML5", "Javascript", "VueJS", "NodeJS", "Vitest", "Git"],
     "links": [{
       "type": "REDIRECTION",
@@ -121,15 +132,16 @@
   },
   {
     "title": "Création d'un framework d'application web en python",
+    "shortDescription": "Création d'un framework de création d'application web from scratch ressemblant dans la syntaxe au framework Express.JS.",
     "categories": ["Personnel"],
-    "description": [
+    "steps": [
       "Développement de la librairie",
       "Documentation de la librairie",
       "Mise en ligne sur github",
       "Support de la librairie avec des publications de version"
     ],
-    "startedAt": "01-10-2021",
-    "endedAt": "01-10-2021",
+    "startedAt": "10-01-2021",
+    "endedAt": "10-01-2021",
     "skills": ["Python", "Git"],
     "links": [{
       "type": "REDIRECTION",
@@ -139,19 +151,20 @@
   },
   {
     "title": "Développement d'une librairie de gestion des permissions pour ApolloGraphQL",
+    "shortDescription": "Développement d'une librairie permettant la configuration et la mise en place de rôle et permissions sur une application web utilisant Apollo GraphQL.",
     "categories": ["Personnel"],
-    "description": [
+    "steps": [
       "Développement de la librairie",
       "Documentation de la librairie",
       "Mise en ligne sur github",
       "Support de la librairie avec des publications de version"
     ],
-    "startedAt": "01-05-2024",
-    "endedAt": "01-07-2024",
+    "startedAt": "05-01-2024",
+    "endedAt": "07-01-2024",
     "skills": ["Javascript", "NodeJS", "Apollo GQL", "Git"],
     "links": [{
       "type": "REDIRECTION",
-      "href": "https://github.com/Matteo0810/asita",
+      "href": "https://github.com/Matteo0810/apollo-permission-manager",
       "label": "Code source"
     }]
   }

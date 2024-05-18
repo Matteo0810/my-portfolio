@@ -1,8 +1,8 @@
 <template>
   <project-list-item-details
-      @close-details="() => showDetails = false"
+      @close-details="() => isShown = false"
       :project="project"
-      v-show="showDetails"
+      :isShown="isShown"
   />
 
   <article>
@@ -35,7 +35,7 @@
       </ul>
     </template>
 
-    <button @click="showDetails = true" class="see-more icon icon-arrow-right">
+    <button @click="isShown = true" class="see-more icon icon-arrow-right">
       {{ $t("projects.project.seeMore") }}
     </button>
   </article>
@@ -44,15 +44,17 @@
 <script setup>
 import {ref, toRefs} from "vue";
 import ProjectListItemDetails from "@/components/projects/ProjectListItemDetails.vue";
-import {toLocaleDate} from "../../utils/dateUtils";
+import {toLocaleDate} from "@/utils/dateUtils";
 
 const props = defineProps({
   project: {
     type: Object,
+    required: true,
     validator: value => {
       return value.title &&
+          value.shortDescription &&
           value.categories?.length &&
-          value.description?.length &&
+          value.steps?.length &&
           value.skills?.length &&
           value.startedAt && value.endedAt;
     }
@@ -62,7 +64,7 @@ const {project} = toRefs(props);
 
 const emit = defineEmits(["toggleFilter"]);
 
-const showDetails = ref(false);
+const isShown = ref(false);
 </script>
 
 <style lang="scss" scoped>

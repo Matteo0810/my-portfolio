@@ -19,7 +19,7 @@
       </template>
     </aside>
     <section class="projects">
-      <div class="header">
+      <header>
         <h2>{{ $t("projects.list.title") }}</h2>
         <button
             class="sort icon icon-sort"
@@ -28,7 +28,7 @@
         >
           {{ $t("projects.list.sortByDate") }}
         </button>
-      </div>
+      </header>
 
       <aside aria-label="active-filters" v-show="activeFiltersLength" class="active-filters">
         <h5>Filtres actifs ({{ activeFiltersLength }})</h5>
@@ -87,8 +87,8 @@ const allProjects = computed(() => {
   // sort by end date
   projectList = projectList.sort((a, b) => {
       return sortDir.value === -1 ?
-          a.endedAt.getFullYear() - b.endedAt.getFullYear() :
-          b.endedAt.getFullYear() - a.endedAt.getFullYear();
+          a.endedAt - b.endedAt :
+          b.endedAt - a.endedAt;
   });
 
   return projectList;

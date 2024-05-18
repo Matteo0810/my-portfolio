@@ -72,7 +72,11 @@
       "skillsTitle": "Technologies utilisées",
       "linksTitle": "Liens",
       "details": {
-        "close": "Fermer"
+        "close": "Fermer",
+        "steps": "Étapes",
+        "technologies": "Technologies utilisées",
+        "description": "Description",
+        "links": "Liens associés"
       }
     }
   }

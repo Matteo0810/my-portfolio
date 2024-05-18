@@ -7,6 +7,7 @@
 
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   animation: open 1s forwards;
 
   &.close {
@@ -49,6 +50,68 @@
       left: 10px;
       top: 28%;
       font-size: 1.1em;
+    }
+  }
+
+  &>main {
+    margin-top: 5em;
+    margin-left: 5em;
+    width: 100vh;
+    //width: 70%;
+
+    &>h2 {
+      color: $black;
+    }
+    &>h3, &>h4 {
+      font-weight: normal;
+      margin: .5em 0;
+    }
+
+    &>p {
+      width: 80%;
+    }
+
+    &>.categories, &>.skills,&>.links {
+      display: flex;
+      list-style: none;
+      margin: .5em 0;
+      gap: 1em;
+    }
+
+    &>.categories {
+      &>li {
+        color: $white;
+        padding: .5em .8em;
+        border-radius: 100px;
+        background-color: $primary;
+      }
+    }
+
+    &>.skills {
+      &>li {
+        color: $primary;
+      }
+    }
+
+    &>.steps {
+      margin-left: 2em;
+      &>li {
+        margin: .3em 0;
+      }
+    }
+
+    &>.links {
+      &>li {
+        &>a {
+          text-decoration: none;
+          padding-right: 2em;
+          &.icon.icon-redirect::before {
+            right: 10px;
+            top: 10%;
+            @include icon("open-in-new");
+          }
+        }
+      }
     }
   }
 }
