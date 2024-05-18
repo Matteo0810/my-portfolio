@@ -1,5 +1,5 @@
 <template>
-  <article class="part">
+  <article class="part" id="contact">
     <h1 class="title">{{ $t("home.contact.title") }}</h1>
     <nav>
       <a class="phone-number">{{ $t("home.contact.phone") }}: </a>

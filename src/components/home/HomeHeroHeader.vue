@@ -10,7 +10,7 @@
           <button class="icon icon-linked-in">Linkedin</button>
         </a>
         <!--<a href="#" download="" target="_blank" rel="noreferrer">
-          <button class="icon icon-download">{{ $t("home.heroHeader.myCV") }}</button>
+          <button class="icon icon-download">{{ $t("home.heroHeader.myResume") }}</button>
         </a>-->
         <a href="https://github.com/Matteo0810" target="_blank" rel="noreferrer">
           <button class="icon icon-github">Github</button>

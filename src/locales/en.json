@@ -1,86 +1,86 @@
 {
   "global": {
     "date": {
-      "today": "Aujourd'hui"
+      "today": "Today"
     }
   },
   "error": {
     "404": {
       "title": "Oups...",
-      "message": "La page demandée est introuvable",
-      "backToHome": "Retour à l'acceuil"
+      "message": "The requested page was not found !",
+      "backToHome": "Back to home"
     }
   },
   "header": {
     "responsiveMenuButton": "Menu",
-    "closeResponsiveMenuButton": "Fermer",
+    "closeResponsiveMenuButton": "Close",
     "navigation": {
-      "home": "Accueil",
-      "about": "À Propos",
-      "education": "Formations",
+      "home": "Home",
+      "about": "About",
+      "education": "Education",
       "experiences": "Experiences",
-      "projects": "Projets",
+      "projects": "Projects",
       "contact": "Contact"
     },
     "locales": {
-      "fr": "Français",
-      "en": "Anglais"
+      "fr": "French",
+      "en": "English"
     }
   },
   "footer": {
     "texts": [
-      "Fait avec",
-      "par",
-      "Code source du site"
+      "Made with",
+      "by",
+      "Source code of the website"
     ]
   },
   "home": {
     "heroHeader": {
-      "subtitle": "Développeur web fullstack",
-      "myResume": "Mon CV"
+      "subtitle": "Fullstack web developer",
+      "myResume": "My resume"
     },
     "about": {
-      "title": "À propos",
+      "title": "About",
       "description": "Actuellement en <b>BUT Informatique</b> en <b>alternance chez CYIM</b> et <b>auto-entrepreneur</b> dans la <b>conception et réalisation de sites web</b>, je dispose d’un large panel de languages de programmation, de descriptions et de frameworks tels que <b>Javascript, Vue.JS, Express.JS, Apollo GraphQL, Node.JS, Typescript, HTML, CSS, React.JS et PHP</b>. J'ai acquis durant mes <b>6 années</b> de formation et d’experience de l’experience dans les différentes phases de <b>conception et réalisation de sites web</b>, comme <b>l'analyse besoin client, la réalisation d'arborescence, de charte graphique</b>, l'intégration et le développement en langages web, <b>front-end et back-end</b>. Passionné par le monde du développement web j’ai eu l’occasion de travailler avec diverses entreprises partout en <b>France</b> et à <b>l’étranger (Royaume-Unis, Allemagne)</b>."
     },
     "schooling": {
-      "title": "Formations"
+      "title": "Education"
     },
     "experiences": {
       "title": "Experiences"
     },
     "contact": {
-      "title":  "Mes coordonnées",
-      "phone": "Tél",
-      "email": "Adresse mail"
+      "title":  "My contact details",
+      "phone": "Phone number",
+      "email": "Email address"
     }
   },
   "projects": {
     "list": {
-      "title": "Projets",
-      "filterButton": "Filtres",
-      "closeFilters": "Fermer",
-      "activeFilters": "Filtres actifs",
-      "sortByDate": "Trier par date",
+      "title": "Projects",
+      "filterButton": "Filters",
+      "closeFilters": "Close",
+      "activeFilters": "Active filters",
+      "sortByDate": "Sort by date",
       "filters": {
         "categories": {
-          "title": "Catégories"
+          "title": "Categories"
         },
         "skills": {
-          "title": "Compétences"
+          "title": "Skills"
         }
       }
     },
     "project": {
-      "seeMore": "Détails du projet",
-      "skillsTitle": "Technologies utilisées",
-      "linksTitle": "Liens",
+      "seeMore": "Project details",
+      "skillsTitle": "Technologies used",
+      "linksTitle": "Links",
       "details": {
-        "close": "Fermer",
-        "steps": "Étapes",
-        "technologies": "Technologies utilisées",
+        "close": "Close",
+        "steps": "Steps",
+        "technologies": "Technologies used",
         "description": "Description",
-        "links": "Liens associés"
+        "links": "Links associated"
       }
     }
   }

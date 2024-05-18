@@ -1,6 +1,2 @@
 - [] : translate schooling, experiences & projects
-- [] : bug sur les filtres, il ne faut pas filtrer sur tous les projets mais uniquement sur le contex (projets déjà filtrés ou alors tous les projets si pas de filtre)
-- [] : avoir un seul project list details au lieu d'un pour chaque project list item
-
-
 - [] : workflow github

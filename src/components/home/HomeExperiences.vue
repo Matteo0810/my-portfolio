@@ -1,5 +1,5 @@
 <template>
-  <article class="part">
+  <article class="part" id="experiences">
     <h1 class="title">{{ $t("home.experiences.title") }}</h1>
 
     <section>

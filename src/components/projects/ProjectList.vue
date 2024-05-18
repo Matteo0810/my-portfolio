@@ -89,7 +89,7 @@ const sortDir = ref(1);
 const allProjects = computed(() => {
   const filters = Object.entries(activeFilters.value);
   let projectList = !filters.length ? projects : projects.filter(project =>
-    filters.some(([key, values]) => project[key].some(v => values.includes(v)))
+    filters.every(([key, values]) => values.every(v => project[key].includes(v)))
   );
 
   // transform all date into a js date object
@@ -100,7 +100,7 @@ const allProjects = computed(() => {
     return project;
   });
 
-  // sort by end date
+  // sort by date
   projectList = projectList.sort((a, b) => {
       return sortDir.value === -1 ?
           a.endedAt - b.endedAt :

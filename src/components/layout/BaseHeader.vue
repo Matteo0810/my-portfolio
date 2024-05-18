@@ -6,22 +6,22 @@
     <nav v-show="responsiveMenuToggled" aria-label="Navigation" aria-description="global navigation and language switching">
       <ul>
         <li>
-          <router-link to="/#">
+          <router-link to="/">
             {{ $t("header.navigation.home") }}
           </router-link>
         </li>
         <li>
-          <router-link to="/#about">
+          <router-link to="/" @click="() => scrollTo('about')">
             {{ $t("header.navigation.about") }}
           </router-link>
         </li>
         <li>
-          <router-link to="/#education">
+          <router-link to="/" @click="() => scrollTo('schooling')">
             {{ $t("header.navigation.education") }}
           </router-link>
         </li>
         <li>
-          <router-link to="/#experiences">
+          <router-link to="/" @click="() => scrollTo('experiences')">
             {{ $t("header.navigation.experiences") }}
           </router-link>
         </li>
@@ -31,7 +31,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/#contact">
+          <router-link to="/" @click="() => scrollTo('contact')">
             {{ $t("header.navigation.contact") }}
           </router-link>
         </li>
@@ -84,6 +84,15 @@ function isClickingOutsideLocalesDropdown({ target }) {
     if(!isFound)
       localesDropdownToggled.value = false;
   })
+}
+
+function scrollTo(elementId) {
+  if(!elementId)
+    throw new Error("No element id provided.")
+  const position = document.getElementById(elementId)?.offsetTop;
+  if(!position)
+    throw new Error("Position not found.");
+  window.scrollTo({ top: position, behavior: "smooth" });
 }
 
 function toggleResponsiveMenu() {
