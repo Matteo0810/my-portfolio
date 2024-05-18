@@ -1,7 +1,16 @@
-name: Build and deploy jobs
+name: Test, build and deploy
 on: [push]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: npm install, then run unit tests
+        run: |
+          npm install
+          npm run test:unit
   build:
     runs-on: ubuntu-latest
     steps:
@@ -29,9 +38,5 @@ jobs:
         name: github-pages
         url: ${{ steps.deployment.outputs.page_url }}
       steps:
-        - name: Download previous artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: dist.tar
         - name: Upload it on github pages
           uses: actions/deploy-pages@v4
