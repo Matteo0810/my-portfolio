@@ -26,7 +26,7 @@ jobs:
           tar -cvf dist.tar dist/*
           gzip dist.tar dist.tgz
       - name: upload pages artifacts
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: dist.tgz
