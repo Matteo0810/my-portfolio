@@ -24,7 +24,7 @@ jobs:
       - name: tar & gzip
         run: |
           tar -cvf dist.tar dist/*
-          gzip dist.tar dist.tgz
+          gzip -9 < dist.tar > dist.tgz
       - name: upload pages artifacts
         uses: actions/upload-artifact@v4
         with:
