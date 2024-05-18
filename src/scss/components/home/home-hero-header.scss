@@ -105,15 +105,16 @@
   &>div.flower[role="graphics-object"] {
     position: absolute;
     background-size: cover;
+    $path: "/images/flowers";
 
     &:nth-of-type(3) {
-      background-image: url(/images/flowers/flower-1.svg);
+      background-image: url(#{$path}/flower-1.svg);
       width: 25em;
       height: 27em;
     }
 
     &:nth-of-type(4) {
-      background-image: url(/images/flowers/flower-2.svg);
+      background-image: url(#{$path}/flower-2.svg);
       width: 23em;
       height: 21em;
 
@@ -121,14 +122,14 @@
     }
 
     &:nth-of-type(5) {
-      background-image: url(/images/flowers/flower-4.svg);
+      background-image: url(#{$path}/flower-4.svg);
       width: 24em;
       height: 26em;
       right: 0;
     }
 
     &:nth-of-type(6) {
-      background-image: url(/images/flowers/flower-3.svg);
+      background-image: url(#{$path}/flower-3.svg);
       width: 15em;
       height: 19em;
 
