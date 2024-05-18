@@ -5,6 +5,37 @@ header {
 
   height: 5em;
 
+  &>button.responsive-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    padding-left: 2.5em;
+    display: none;
+
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+
+    &:is(.navbar-toggled, :hover, :focus) {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &.navbar-toggled {
+      &.icon-menu::before {
+        @include icon("close");
+      }
+    }
+
+    &.icon-menu::before {
+      left: 10px;
+      top: 27%;
+      font-size: 1.3em;
+      @include icon("menu");
+    }
+  }
+
   &>nav {
     display: flex;
     align-items: center;
@@ -81,6 +112,56 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  header {
+    &>.responsive-button {
+      display: block !important;
+      z-index: 99;
+
+      &.navbar-toggled {
+        position: fixed !important;
+      }
+    }
+    &>nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      display: block;
+
+      z-index: 3;
+      font-size: 1.6em;
+
+      &>ul {
+        display: block;
+        margin: 3em 1em;
+        margin-bottom: unset;
+        &>li {
+          margin: .9em 0;
+        }
+      }
+
+      &>.locales {
+        border: unset !important;
+        &>button {
+          padding-top: unset !important;
+          padding-left: 1em !important;
+        }
+
+        &>.dropdown {
+          position: unset !important;
+          border: unset !important;
+        }
+      }
+
+      background-color: $white;
     }
   }
 }

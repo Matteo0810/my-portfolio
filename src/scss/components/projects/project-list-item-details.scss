@@ -115,3 +115,11 @@
     }
   }
 }
+
+@media screen and (max-width: 740px) {
+  .details > main {
+    width: 100%;
+    margin: 0 1em;
+    margin-top: 6em;
+  }
+}

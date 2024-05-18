@@ -1,6 +1,9 @@
 <template>
   <section class="projects-section">
-    <aside aria-label="filters" class="filters">
+    <aside v-show="filterShown" aria-label="filters" class="filters">
+      <button @click="filterShown = false" class="close-filters icon icon-close">
+        {{ $t("projects.list.closeFilters") }}
+      </button>
       <template v-for="{name, data} in FILTERS" :key="name">
         <h4>
           {{ $t(`projects.list.filters.${name}.title`) }}
@@ -20,6 +23,7 @@
     </aside>
     <section class="projects">
       <header>
+        <button @click="filterShown = true" class="filter icon icon-filter">{{ $t("projects.list.filterButton") }}</button>
         <h2>{{ $t("projects.list.title") }}</h2>
         <button
             class="sort icon icon-sort"
@@ -54,7 +58,7 @@
 
 <script setup>
 import projects from "@/data/projects.json";
-import {computed, ref} from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
 
 import ProjectListItem from "@/components/projects/ProjectListItem.vue";
 
@@ -65,6 +69,9 @@ const categories = ref([...new Set(projects.reduce((acc, {categories}) => [...ac
 // active filters section
 const activeFilters = ref({});
 const activeFiltersLength = computed(() => Object.keys(activeFilters.value).length);
+
+// only for responsive purpose
+const filterShown = ref(true);
 
 // sort direction
 const sortDir = ref(1);
@@ -118,10 +125,7 @@ function toggleFilter(name, data) {
     if(!activeFilters.value[name].includes(data))
       activeFilters.value[name].push(data);
     else
-      activeFilters.value[name].splice(
-          activeFilters.value[name].indexOf(data),
-          1
-      );
+      activeFilters.value[name].splice(activeFilters.value[name].indexOf(data), 1);
 
     if(!activeFilters.value[name].length)
       delete activeFilters.value[name];
@@ -146,6 +150,18 @@ function removeFilter(name, data) {
   if(!activeFilters.value[name].length)
     delete activeFilters.value[name];
 }
+
+function toggleResponsiveFilterBar() {
+  filterShown.value = !window.matchMedia("(max-width: 862px").matches;
+}
+
+onMounted(() => {
+  toggleResponsiveFilterBar();
+  window.addEventListener("resize", toggleResponsiveFilterBar);
+})
+onUnmounted(() => {
+  window.removeEventListener("resize", toggleResponsiveFilterBar);
+})
 
 </script>
 

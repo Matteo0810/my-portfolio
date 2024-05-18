@@ -94,3 +94,10 @@ article {
   }
 
 }
+
+
+@media screen and (max-width: 862px) {
+  article {
+    width: 25em;
+  }
+}

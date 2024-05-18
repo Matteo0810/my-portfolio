@@ -29,6 +29,23 @@ h1 {
     padding-right: 2em;
     border-right: 1px solid $gray-1;
 
+    &>.close-filters {
+      margin-top: 1em;
+      padding-left: 2.5em;
+      display: none;
+
+      position: absolute;
+      top: 5px;
+      right: 20px;
+
+      &.icon-close::before {
+        @include icon("close");
+        font-size: 1.3em;
+        top: 27%;
+        left: 10px;
+      }
+    }
+
     &>h4 {
       font-weight: normal;
       margin: .5em 0;
@@ -143,6 +160,17 @@ h1 {
       //padding-bottom: 1em;
       //border-bottom: 1px solid $gray-1;
 
+      &>button.filter {
+        padding-left: 2.5em;
+        display: none;
+        &.icon-filter::before {
+          left: 10px;
+          top: 23%;
+          font-size: 1.5em;
+          @include icon("filter-variant");
+        }
+      }
+
       &>h2 {
         color: $black;
       }
@@ -178,6 +206,53 @@ h1 {
       gap: 2em;
 
       margin-top: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 862px) {
+  .projects-section > aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin-left: unset;
+
+    z-index: 99;
+
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+
+    padding: 2em 2em;
+
+    animation: open .5s forwards;
+
+    &>.close-filters {
+      display: block;
+    }
+
+    @keyframes open {
+      from {
+        left: -100vh;
+      }
+      to {
+        left: 0;
+      }
+    }
+  }
+  .projects-section > section.projects  {
+    &> header {
+      margin: 0 1em;
+
+      &>button.filter {
+        display: block;
+      }
+    }
+  }
+  .projects-section > section.projects  {
+    &> section {
+      justify-content: center;
     }
   }
 }

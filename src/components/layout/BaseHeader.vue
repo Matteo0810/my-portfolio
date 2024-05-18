@@ -1,6 +1,9 @@
 <template>
   <header>
-    <nav aria-label="Navigation" aria-description="global navigation and language switching">
+    <button :class="{'navbar-toggled': responsiveMenuToggled}" @click="responsiveMenuToggled = !responsiveMenuToggled" class="responsive-button icon icon-menu">
+      {{ $t(`header.${responsiveMenuToggled ? "closeResponsiveMenuButton" : "responsiveMenuButton"}`) }}
+    </button>
+    <nav v-show="responsiveMenuToggled" aria-label="Navigation" aria-description="global navigation and language switching">
       <ul>
         <li>
           <router-link to="/#">
@@ -57,12 +60,14 @@
 
 <script setup>
 import {useI18n} from "vue-i18n";
-import {onBeforeUnmount, onMounted, ref} from "vue";
+import {onBeforeUnmount, onMounted, onUnmounted, ref} from "vue";
 import {triggerWhenElementFound} from "@/utils/globalUtils";
 
 const { locale, availableLocales } = useI18n();
 
 const localesDropdownToggled = ref(false);
+
+const responsiveMenuToggled = ref(true);
 
 function toggleLocalesDropdown() {
   localesDropdownToggled.value = !localesDropdownToggled.value;
@@ -81,11 +86,18 @@ function isClickingOutsideLocalesDropdown({ target }) {
   })
 }
 
+function toggleResponsiveMenu() {
+  responsiveMenuToggled.value = !window.matchMedia("(max-width: 740px").matches;
+}
+
 onMounted(() => {
+  toggleResponsiveMenu();
+  window.addEventListener("resize", toggleResponsiveMenu);
   document.addEventListener("click", isClickingOutsideLocalesDropdown);
 });
 
 onBeforeUnmount(() => {
+  window.removeEventListener("resize", toggleResponsiveMenu);
   document.removeEventListener("click", isClickingOutsideLocalesDropdown);
 })
 </script>

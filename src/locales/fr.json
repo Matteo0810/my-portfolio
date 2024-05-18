@@ -12,6 +12,8 @@
     }
   },
   "header": {
+    "responsiveMenuButton": "Menu",
+    "closeResponsiveMenuButton": "Fermer",
     "navigation": {
       "home": "Accueil",
       "about": "À Propos",
@@ -56,6 +58,8 @@
   "projects": {
     "list": {
       "title": "Projets",
+      "filterButton": "Filtres",
+      "closeFilters": "Fermer",
       "activeFilters": "Filtres actifs",
       "sortByDate": "Trier par date",
       "filters": {
