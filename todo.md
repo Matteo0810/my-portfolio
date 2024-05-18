@@ -1,9 +1,4 @@
-- [] : put the "a" element inside the button instead of having the button inside the "a" element
-- [] : reduce images size
-- [] : changer le format des images par SVG
 - [] : translate schooling, experiences & projects
-- [] : responsive
 - [] : bug sur les filtres, il ne faut pas filtrer sur tous les projets mais uniquement sur le contex (projets déjà filtrés ou alors tous les projets si pas de filtre)
-- [] : rédiger un readme
 - [] : workflow github
 - [] : avoir un seul project list details au lieu d'un pour chaque project list item
