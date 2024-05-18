@@ -21,11 +21,9 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: tar the project
+      - name: tar & gzip
         run: |
           tar -cvf dist.tar dist/*
-      - name: gzip the tar file
-        run: |
           gzip dist.tar dist.tgz
       - name: upload pages artifacts
         uses: actions/upload-pages-artifact
