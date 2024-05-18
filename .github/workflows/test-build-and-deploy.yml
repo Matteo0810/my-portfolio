@@ -21,14 +21,17 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: zip the project
+      - name: tar the project
         run: |
           tar -cvf dist.tar dist/*
-      - name: export the project
-        uses: actions/upload-artifact@v4
+      - name: gzip the tar file
+        run: |
+          gzip dist.tar dist.tgz
+      - name: upload pages artifacts
+        uses: actions/upload-pages-artifact
         with:
           name: github-pages
-          path: dist.tar
+          path: dist.tgz
   deploy:
       runs-on: ubuntu-latest
       needs: build
