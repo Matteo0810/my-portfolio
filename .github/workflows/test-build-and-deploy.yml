@@ -22,7 +22,7 @@ jobs:
           npm run build
       - name: zip the project
         run: |
-          tar -cvf dist
+          tar -cvf dist.tar dist/*
       - name: export the project
         uses: actions/upload-artifact@v4
         with:
