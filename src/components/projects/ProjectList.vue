@@ -75,7 +75,7 @@ const categories = ref([...new Set(projects.reduce((acc, {categories}) => [...ac
 
 // active filters section
 const activeFilters = ref({});
-const activeFiltersLength = computed(() => Object.values(activeFilters).flat().length);
+const activeFiltersLength = computed(() => Object.values(activeFilters.value).flat().length);
 
 // only for responsive purpose
 const filterShown = ref(true);
