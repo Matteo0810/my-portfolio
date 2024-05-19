@@ -39,8 +39,8 @@
         </button>
       </header>
 
-      <aside aria-label="active-filters" v-show="Object.keys(activeFilters).length" class="active-filters">
-        <h5>{{  $t("projects.list.activeFilters")  }} ({{ Object.keys(activeFilters).length }})</h5>
+      <aside aria-label="active-filters" v-show="activeFiltersLength" class="active-filters">
+        <h5>{{  $t("projects.list.activeFilters")  }} ({{ activeFiltersLength }})</h5>
         <ul>
           <template v-for="[name, values] in Object.entries(activeFilters)" :key="name">
             <li @click="() => removeFilter(name, value)" v-for="value in values" :key="value">
@@ -75,6 +75,7 @@ const categories = ref([...new Set(projects.reduce((acc, {categories}) => [...ac
 
 // active filters section
 const activeFilters = ref({});
+const activeFiltersLength = computed(() => Object.values(activeFilters).flat().length);
 
 // only for responsive purpose
 const filterShown = ref(true);
